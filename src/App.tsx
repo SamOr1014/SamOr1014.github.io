@@ -1,7 +1,5 @@
-import "./App.css";
-
 function App() {
-  return <div>Sam's personal Page</div>;
+  return <div>Sam's personal Page</div>
 }
 
-export default App;
+export default App
