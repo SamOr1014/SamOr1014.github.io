@@ -8,7 +8,8 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "prettier",
+        "airbnb"
     ],
     "overrides": [
     ],
@@ -19,10 +20,13 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "react/no-unescaped-entities": "off"
+        "react/no-unescaped-entities": "off",
+        "no-console": "off"
     }
 }
