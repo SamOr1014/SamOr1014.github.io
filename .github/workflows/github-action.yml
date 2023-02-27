@@ -15,6 +15,6 @@ jobs:
       - name: install all dependecies
         run: yarn
       - name: build the dist
-        run: git config --global user.email ${{var.EMAIL}} && git config --global user.name ${{var.NAME}} && yarn build 
+        run: git config --global user.email ${{env.EMAIL}} && git config --global user.name ${{env.NAME}} && yarn build 
       - name: after building the dist file 
         run: yarn deploy
