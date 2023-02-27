@@ -1,0 +1,19 @@
+name: deploy to gh pages
+run-name: ${{github.actor}} is running deployment
+on: 
+  push: 
+    branches:
+      - main
+jobs: 
+  deploy-to-gh-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: install all dependecies
+        run: npm install
+      - name: build the dist
+        run: npm build 
+      - name: after building the dist file 
+        run: npm run deploy
