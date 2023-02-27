@@ -13,8 +13,8 @@ jobs:
         with: 
           node-version: 18
       - name: install all dependecies
-        run: npm install
+        run: yarn
       - name: build the dist
-        run: npm build 
+        run: yarn build 
       - name: after building the dist file 
-        run: npm run deploy
+        run: yarn deploy
