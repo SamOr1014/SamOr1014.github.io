@@ -12,6 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 18
+      - uses: de-vri-es/setup-git-credentials@v2
+        with:
+          credentials: ${{secrets.CREDENTIALS}}
       - name: install all dependecies
         run: yarn
       - name: build the dist
