@@ -1,15 +1,15 @@
-import { Avatar, Box } from '@mui/material'
-import styled from 'styled-components'
-import pic from '../assets/IMG_8288.jpg'
-import { useWebMediaQuery } from '../hooks/useMediaQuery'
-import { Title } from './Title'
+import { Avatar, Box } from '@mui/material';
+import styled from 'styled-components';
+import pic from '../assets/IMG_8288.jpg';
+import { useWebMediaQuery } from '../hooks/useMediaQuery';
+import { Title } from './Title';
 
-export const AboutMe = () => {
-  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } = useWebMediaQuery()
+export function AboutMe() {
+  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } = useWebMediaQuery();
   return (
     <AboutMeContainer gap={10}>
       <TitleWrapper>
-        <Title title={'About Me'} paddingX={'1.5rem'} />
+        <Title title="About Me" paddingX="1.5rem" />
       </TitleWrapper>
       <FlexWrapper>
         <AvatarWrapper>
@@ -27,8 +27,8 @@ export const AboutMe = () => {
             smallerThanMDMediaBreakPoint
               ? '1rem'
               : smallerThanXLMediaBreakPoint
-              ? ' 1.5rem '
-              : '2rem'
+                ? ' 1.5rem '
+                : '2rem'
           }
         >
           <div>
@@ -40,27 +40,27 @@ export const AboutMe = () => {
         </AboutMeWrapper>
       </FlexWrapper>
     </AboutMeContainer>
-  )
+  );
 }
 
 const TitleWrapper = styled(Box)`
   display: flex;
   justify-content: center;
-`
+`;
 
 const AboutMeContainer = styled(Box)`
   padding: 2vw;
   width: 100%;
-`
+`;
 const FlexWrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-`
+`;
 const AboutMeWrapper = styled(Box)`
   max-width: 700px;
   display: flex;
   align-items: center;
-`
-const AvatarWrapper = styled(Box)``
+`;
+const AvatarWrapper = styled(Box)``;

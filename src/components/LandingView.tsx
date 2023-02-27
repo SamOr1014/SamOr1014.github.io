@@ -1,10 +1,9 @@
-import { Avatar, Box } from '@mui/material'
-import styled from 'styled-components'
-import { useWebMediaQuery } from '../hooks/useMediaQuery'
-import pic from '../assets/IMG_8964.jpg'
+import { Box } from '@mui/material';
+import styled from 'styled-components';
+import { useWebMediaQuery } from '../hooks/useMediaQuery';
 
-export const LandingView = () => {
-  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } = useWebMediaQuery()
+export function LandingView() {
+  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } = useWebMediaQuery();
   return (
     <StyledBox
       fontSize={
@@ -19,7 +18,7 @@ export const LandingView = () => {
         </WelcomeTextDiv>
       </StyledDiv>
     </StyledBox>
-  )
+  );
 }
 
 const StyledBox = styled(Box)`
@@ -29,10 +28,10 @@ const StyledBox = styled(Box)`
   gap: 10;
   flex-wrap: wrap;
   justify-content: space-between;
-`
+`;
 const StyledDiv = styled(Box)`
   position: relative;
-`
+`;
 const WelcomeTextDiv = styled.div`
   position: absolute;
   top: 50%;
@@ -58,4 +57,4 @@ const WelcomeTextDiv = styled.div`
     -webkit-animation: gradient 3s ease infinite;
     animation: gradient 3s ease infinite;
   }
-`
+`;
