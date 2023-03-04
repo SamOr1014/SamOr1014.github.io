@@ -1,40 +1,34 @@
-import { Avatar, Box } from '@mui/material';
-import styled from 'styled-components';
-import pic from '../assets/IMG_8288.jpg';
-import { useWebMediaQuery } from '../hooks/useMediaQuery';
-import { Title } from './Title';
+import { Avatar, Box } from "@mui/material";
+import React from "react";
+import styled from "styled-components";
+import pic from "../assets/IMG_8288.jpg";
+import { useWebMediaQuery } from "../hooks/useMediaQuery";
+import Title from "./common/Title";
+import { MediaQueryProps } from "../types/mediaQueryTypes";
 
-export function AboutMe() {
-  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } = useWebMediaQuery();
+function AboutMe() {
+  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
+    useWebMediaQuery();
   return (
-    <AboutMeContainer gap={10}>
-      <TitleWrapper>
-        <Title title="About Me" paddingX="1.5rem" />
-      </TitleWrapper>
+    <AboutMeContainer>
+      <Title title="About Me" paddingX="1.5rem" />
       <FlexWrapper>
-        <AvatarWrapper>
-          <Avatar
-            style={{}}
-            src={pic}
-            sx={{
-              width: smallerThanMDMediaBreakPoint ? 350 : 500,
-              height: smallerThanMDMediaBreakPoint ? 350 : 500,
-            }}
-          />
-        </AvatarWrapper>
+        <Avatar
+          src={pic}
+          sx={{
+            width: smallerThanMDMediaBreakPoint ? 350 : 500,
+            height: smallerThanMDMediaBreakPoint ? 350 : 500,
+          }}
+        />
         <AboutMeWrapper
-          fontSize={
-            smallerThanMDMediaBreakPoint
-              ? '1rem'
-              : smallerThanXLMediaBreakPoint
-                ? ' 1.5rem '
-                : '2rem'
-          }
+          md={smallerThanMDMediaBreakPoint}
+          xl={smallerThanXLMediaBreakPoint}
         >
           <div>
             <p>
-              Greetings ! I'm Sam. I am a nutrition degree graduate who became a web programmer. I'm
-              passionate and wish to learn every aspect of web development👨🏽‍💻
+              Greetings ! I'm Sam. I am a nutrition degree graduate who became a
+              web programmer. I'm passionate and wish to learn every aspect of
+              web development👨🏽‍💻
             </p>
           </div>
         </AboutMeWrapper>
@@ -43,12 +37,8 @@ export function AboutMe() {
   );
 }
 
-const TitleWrapper = styled(Box)`
-  display: flex;
-  justify-content: center;
-`;
-
 const AboutMeContainer = styled(Box)`
+  height: 100vh;
   padding: 2vw;
   width: 100%;
 `;
@@ -58,9 +48,11 @@ const FlexWrapper = styled(Box)`
   justify-content: space-around;
   width: 100%;
 `;
-const AboutMeWrapper = styled(Box)`
+const AboutMeWrapper = styled(Box)<MediaQueryProps>`
   max-width: 700px;
   display: flex;
   align-items: center;
+  font-size: ${({ md, xl }) => (md ? "1.3rem" : xl ? " 1.5rem " : "2rem")};
 `;
-const AvatarWrapper = styled(Box)``;
+
+export default AboutMe;
