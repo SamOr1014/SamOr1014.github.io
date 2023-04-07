@@ -4,7 +4,7 @@ import styled from "styled-components";
 import pic from "../assets/IMG_8288.jpg";
 import { useWebMediaQuery } from "../hooks/useMediaQuery";
 import Title from "./common/Title";
-import { MediaQueryProps } from "../types/mediaQueryTypes";
+import { MediaQueryProps } from "../constants/mediaQueryTypes";
 
 function AboutMe() {
   const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
@@ -27,9 +27,10 @@ function AboutMe() {
           <div>
             <p>
               Greetings ! I'm Sam. I am a nutrition degree graduate who became a
-              web programmer. I'm passionate and wish to learn every aspect of
+              web developer. I'm passionate and wish to learn every aspect of
               web development👨🏽‍💻
             </p>
+            <SubTitle>Tech Stacks</SubTitle>
           </div>
         </AboutMeWrapper>
       </FlexWrapper>
@@ -53,6 +54,9 @@ const AboutMeWrapper = styled(Box)<MediaQueryProps>`
   display: flex;
   align-items: center;
   font-size: ${({ md, xl }) => (md ? "1.3rem" : xl ? " 1.5rem " : "2rem")};
+`;
+const SubTitle = styled.h6`
+  text-align: center;
 `;
 
 export default AboutMe;

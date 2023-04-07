@@ -5,10 +5,12 @@ import LandingView from "./components/LandingView";
 import "./style/global.css";
 import AboutMe from "./components/AboutMe";
 import ProjectsLayout from "./components/Projects";
+import { CanvasBackground } from "./components/common/CanvasBackground";
 
 function App() {
   return (
-    <StyledContainer maxWidth={"xl"}>
+    <StyledContainer maxWidth={"xl"} id="app-container">
+      <CanvasBackground id={"moving-canvas"} />
       <LandingView />
       <AboutMe />
       <ProjectsLayout />
@@ -20,8 +22,8 @@ export default App;
 
 const StyledContainer = styled(Container)`
   height: 100vh;
-  padding: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;

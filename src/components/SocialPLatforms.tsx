@@ -1,9 +1,11 @@
 import React from "react";
-import { Stack, IconButton } from "@mui/material";
+import { Stack } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { GitHub } from "@mui/icons-material";
 import { useWebMediaQuery } from "../hooks/useMediaQuery";
+import { CustomIconButton } from "./common/CustomIconButton";
+import { SocialContactEnum } from "../constants/socialContactEnum";
 
 const SocialPlatforms = () => {
   const { smallerThanMDMediaBreakPoint } = useWebMediaQuery();
@@ -14,47 +16,51 @@ const SocialPlatforms = () => {
       justifyContent={"center"}
       spacing={smallerThanMDMediaBreakPoint ? 4 : 10}
     >
-      <IconButton
+      <CustomIconButton
         color="primary"
-        aria-label="Linkedin"
+        ariaLabel="Linkedin"
         size="large"
-        href="https://www.linkedin.com/in/chamsumor"
+        href={SocialContactEnum.LINKEDIN}
         target="_blank"
-      >
-        <LinkedInIcon
-          sx={{
-            fontSize: "3.5rem",
-          }}
-        />
-      </IconButton>
-      <IconButton
+        icon={
+          <LinkedInIcon
+            sx={{
+              fontSize: "3.5rem",
+            }}
+          />
+        }
+      />
+      <CustomIconButton
         color="info"
-        aria-label="Github"
+        ariaLabel="Github"
         size="large"
-        href="https://github.com/SamOr1014"
+        href={SocialContactEnum.GITHUB}
         target="_blank"
-      >
-        <GitHub
-          sx={{
-            fontSize: "3.5rem",
-            color: "white",
-          }}
-        />
-      </IconButton>
-      <IconButton
+        icon={
+          <GitHub
+            sx={{
+              fontSize: "3.5rem",
+              color: "white",
+            }}
+          />
+        }
+      />
+
+      <CustomIconButton
         color="info"
-        aria-label="Github"
+        ariaLabel="Email"
         size="large"
-        href="mailto:orchamsumsam1014@gmail.com"
+        href={SocialContactEnum.MAIL}
         target="_blank"
-      >
-        <ContactMailIcon
-          sx={{
-            fontSize: "3.5rem",
-            color: "#ec1456",
-          }}
-        />
-      </IconButton>
+        icon={
+          <ContactMailIcon
+            sx={{
+              fontSize: "3.5rem",
+              color: "#ec1456",
+            }}
+          />
+        }
+      />
     </Stack>
   );
 };

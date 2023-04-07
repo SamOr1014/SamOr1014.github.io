@@ -18,7 +18,8 @@ function Title({ title, paddingX = "none" }: TTitle) {
 }
 
 const StyledBox = styled(Box)`
-  border: 1px solid white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem 0.5rem #1a1a2e;
   width: max-content;
   margin: 1rem 0 1rem 0;
 `;

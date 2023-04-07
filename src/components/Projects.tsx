@@ -6,7 +6,7 @@ import Title from "./common/Title";
 const ProjectsLayout = () => {
   return (
     <ProjectContainer>
-      <Title title={"Projects"} />
+      <Title title={"Projects"} paddingX="1.5rem" />
     </ProjectContainer>
   );
 };

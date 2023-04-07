@@ -2,8 +2,8 @@ import { Box } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import { useWebMediaQuery } from "../hooks/useMediaQuery";
-import { MediaQueryProps } from "../types/mediaQueryTypes";
-import SocialPlatforms from "./SocialPLatforms";
+import { MediaQueryProps } from "../constants/mediaQueryTypes";
+import SocialPlatforms from "./SocialPlatforms";
 
 function LandingView() {
   const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
@@ -15,6 +15,7 @@ function LandingView() {
     >
       <StyledDiv flex={2}>
         <WelcomeTextDiv
+          id={"welcomeTextDiv"}
           md={smallerThanMDMediaBreakPoint}
           xl={smallerThanXLMediaBreakPoint}
         >
@@ -44,8 +45,7 @@ const StyledDiv = styled(Box)`
   align-items: center;
 `;
 const WelcomeTextDiv = styled.div<MediaQueryProps>`
-  text-align: ${({ md }) => (md ? "center" : "justify")};
-
+  text-align: center; //${({ md }) => (md ? "center" : "justify")};
   > h2,
   p {
     background: -webkit-linear-gradient(white, #38495a);
