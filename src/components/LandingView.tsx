@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { useWebMediaQuery } from "../hooks/useMediaQuery";
 import { MediaQueryProps } from "../constants/mediaQueryTypes";
-import SocialPlatformsButtons from "./SocialPlatformsButtons";
+import { SocialPlatformsButtons } from "./SocialPlatformsButtons";
 
 function LandingView() {
   const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
