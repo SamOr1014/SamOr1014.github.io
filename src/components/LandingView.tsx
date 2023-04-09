@@ -13,20 +13,18 @@ function LandingView() {
       md={smallerThanMDMediaBreakPoint}
       xl={smallerThanXLMediaBreakPoint}
     >
-      <StyledDiv flex={2}>
-        <WelcomeTextDiv
-          id={"welcomeTextDiv"}
-          md={smallerThanMDMediaBreakPoint}
-          xl={smallerThanXLMediaBreakPoint}
-        >
-          <h2>Welcome!!!!</h2>
-          <p>
-            I'm <span>Sam OR</span>
-          </p>
-          <p>A Full Stack Web Developer</p>
-          <SocialPlatforms />
-        </WelcomeTextDiv>
-      </StyledDiv>
+      <WelcomeTextDiv
+        id={"welcomeTextDiv"}
+        md={smallerThanMDMediaBreakPoint}
+        xl={smallerThanXLMediaBreakPoint}
+      >
+        <h2>Welcome!!!!</h2>
+        <p>
+          I'm <span>Sam OR</span>
+        </p>
+        <p>A Full Stack Web Developer</p>
+        <SocialPlatforms />
+      </WelcomeTextDiv>
     </StyledBox>
   );
 }
@@ -35,14 +33,9 @@ const StyledBox = styled(Box)<MediaQueryProps>`
   font-size: ${({ md, xl }) => (md ? "2rem" : xl ? " 2.5rem " : "3rem")};
   height: 100vh;
   width: 100%;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-  flex-direction: column;
-`;
-const StyledDiv = styled(Box)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
 `;
 const WelcomeTextDiv = styled.div<MediaQueryProps>`
   text-align: center; //${({ md }) => (md ? "center" : "justify")};
