@@ -142,21 +142,21 @@ Error generating stack: `+i.message+`
   flex-wrap: wrap;
   place-items: center;
 `,GS=Mt.div`
-  text-align: center; //${({md:e})=>e?"center":"justify"};
+  text-align: center;
   > h2,
   p {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   > p > span {
     font-size: 5rem;
     background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400% 400%;
-    -webkit-animation: gradient 3s ease infinite;
-    animation: gradient 3s ease infinite;
   }
 `;const QS="/assets/IMG_8288-e2b8f168.jpg";function wm({title:e,paddingX:t="none"}){return B(XS,{children:B(YS,{px:t,children:B("h2",{children:e})})})}const YS=Mt(Kn)`
   border-radius: 0.5rem;
