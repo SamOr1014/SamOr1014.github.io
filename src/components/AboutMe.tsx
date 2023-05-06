@@ -5,11 +5,11 @@ import pic from "../assets/IMG_8288.jpg";
 import { useWebMediaQuery } from "../hooks/useMediaQuery";
 import Title from "./common/Title";
 import { MediaQueryProps } from "../constants/mediaQueryTypes";
-import nodeLogo from "../assets/nodeLogo.png";
-import reactLogo from "../assets/reactLogo.png";
-import tsLogo from "../assets/tsLogo.png";
-import postgresLogo from "../assets/postgresLogo.png";
-import mongoLogo from "../assets/mongoLogo.png";
+import nodeLogo from "../assets/nodelogo.png";
+import reactLogo from "../assets/reactlogo.png";
+import tsLogo from "../assets/tslogo.png";
+import postgresLogo from "../assets/postgreslogo.png";
+import mongoLogo from "../assets/mongologo.png";
 import MainTechStack from "./common/ListOfAvatar";
 
 function AboutMe() {
