@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface CanvasBackgroundProps {
   id: string;
 }
-
+//still under development for animated background
 export const CanvasBackground = ({ id }: CanvasBackgroundProps) => {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const [canvasContext, setCanvasContext] =

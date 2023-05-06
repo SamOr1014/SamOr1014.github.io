@@ -34,7 +34,6 @@ const StyledBox = styled(Box)<MediaQueryProps>`
   height: 100vh;
   width: 100%;
   display: grid;
-  flex-wrap: wrap;
   place-items: center;
 `;
 const WelcomeTextDiv = styled.div<MediaQueryProps>`
