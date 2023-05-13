@@ -16,18 +16,20 @@ function AboutMe() {
   const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
     useWebMediaQuery();
   return (
-    <AboutMeContainer>
+    <AboutMeContainer md={smallerThanMDMediaBreakPoint}>
       <div>
         <Title title="About Me" paddingX="1.5rem" />
         <FlexWrapper>
-          <Avatar
-            alt="my profile picture"
-            src={pic}
-            sx={{
-              width: smallerThanMDMediaBreakPoint ? 350 : 500,
-              height: smallerThanMDMediaBreakPoint ? 350 : 500,
-            }}
-          />
+          <AvatarWrapper>
+            <Avatar
+              alt="my profile picture"
+              src={pic}
+              sx={{
+                width: smallerThanMDMediaBreakPoint ? 350 : 500,
+                height: smallerThanMDMediaBreakPoint ? 350 : 500,
+              }}
+            />
+          </AvatarWrapper>
           <AboutMeWrapper
             md={smallerThanMDMediaBreakPoint}
             xl={smallerThanXLMediaBreakPoint}
@@ -37,6 +39,12 @@ function AboutMe() {
                 Greetings ! I'm Sam. I am a nutrition degree graduate who became
                 a web developer. I'm passionate and wish to learn every aspect
                 of web development👨🏽‍💻
+              </p>
+              <p>
+                I joined a web development course at{" "}
+                <a href="https://tecky.io/en/">Tecky Academy</a> in June 2022,
+                and I am now (as of May 2023) working at a digit media company
+                in Hong Kong as a Software Engineer.
               </p>
               <SubTitle>Main Tech Stacks</SubTitle>
               <MainTechStack
@@ -50,24 +58,29 @@ function AboutMe() {
   );
 }
 
-const AboutMeContainer = styled(Box)`
-  height: max-content;
+const AboutMeContainer = styled(Box)<MediaQueryProps>`
+  height: ${({ md }) => (md ? "max-content" : "100vh")};
   width: 100%;
   display: grid;
   place-items: center;
+  margin-bottom: ${({ md }) => (md ? "3rem" : "0px")};
 `;
 const FlexWrapper = styled(Box)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
 `;
 const AboutMeWrapper = styled(Box)<MediaQueryProps>`
   max-width: 700px;
   display: flex;
   align-items: center;
-  font-size: ${({ md, xl }) => (md ? "1.2rem" : xl ? " 1.5rem " : "1.8rem")};
+  font-size: ${({ md, xl }) => (md ? "1rem" : xl ? " 1.3rem " : "1.5rem")};
+`;
+const AvatarWrapper = styled(Box)`
+  display: grid;
+  place-items: center;
 `;
 const SubTitle = styled.h6`
   text-align: center;
