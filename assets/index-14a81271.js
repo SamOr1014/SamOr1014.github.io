@@ -179,12 +179,12 @@ Error generating stack: `+i.message+`
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
-`;function uk(){const{smallerThanMDMediaBreakPoint:e,smallerThanXLMediaBreakPoint:t}=Yo();return M(ck,{md:e,children:ze("div",{children:[M(Nm,{title:"About Me",paddingX:"1.5rem"}),ze(fk,{children:[M(pk,{children:M(ym,{alt:"my profile picture",src:qx,sx:{width:e?350:500,height:e?350:500}})}),M(dk,{md:e,xl:t,children:ze("div",{children:[M("p",{children:"Greetings ! I'm Sam. I am a nutrition degree graduate who became a web developer. I'm passionate and wish to learn every aspect of web development👨🏽‍💻"}),ze("p",{children:["I joined a web development course at"," ",M("a",{href:"https://tecky.io/en/",children:"Tecky Academy"})," in June 2022, and I am now (as of May 2023) working at a digit media company in Hong Kong as a Software Engineer."]}),M(hk,{children:"Main Tech Stacks"}),M(ak,{images:[rk,nk,ok,ik,lk]})]})})]})]})})}const ck=Ze(Ft)`
-  height: ${({md:e})=>e?"max-content":"100vh"};
+`;function uk(){const{smallerThanMDMediaBreakPoint:e,smallerThanXLMediaBreakPoint:t,smallerThanLGMediaBreakPoint:n}=Yo();return M(ck,{md:e,lg:n,children:ze("div",{children:[M(Nm,{title:"About Me",paddingX:"1.5rem"}),ze(fk,{children:[M(pk,{children:M(ym,{alt:"my profile picture",src:qx,sx:{width:e?350:500,height:e?350:500}})}),M(dk,{md:e,xl:t,children:ze("div",{children:[M("p",{children:"Greetings ! I'm Sam. I am a nutrition degree graduate who became a web developer. I'm passionate and wish to learn every aspect of web development👨🏽‍💻"}),ze("p",{children:["I joined a web development course at"," ",M("a",{href:"https://tecky.io/en/",children:"Tecky Academy"})," in June 2022, and I am now (as of May 2023) working at a digit media company in Hong Kong as a Software Engineer."]}),M(hk,{children:"Main Tech Stacks"}),M(ak,{images:[rk,nk,ok,ik,lk]})]})})]})]})})}const ck=Ze(Ft)`
+  height: max-content;
   width: 100%;
   display: grid;
   place-items: center;
-  margin-bottom: ${({md:e})=>e?"3rem":"0px"};
+  margin-bottom: ${({lg:e})=>e?"3rem":"1rem"};
 `,fk=Ze(Ft)`
   display: flex;
   flex-wrap: wrap;
@@ -202,15 +202,15 @@ Error generating stack: `+i.message+`
 `,hk=Ze.h6`
   text-align: center;
 `,Cd=({image:e,description:t,title:n,githubLink:r,previewLink:o,pictureStyling:i})=>{const{smallerThanMDMediaBreakPoint:l}=Yo(),a=s=>{window.open(s,"_blank")};return ze(mk,{md:l,children:[M(gk,{title:n}),M(yk,{children:M("img",{src:e,style:{...i,height:"180px",objectFit:"contain"}})}),ze(zS,{children:[M(io,{variant:"body2",children:t}),ze(vk,{children:[r&&M(Ed,{startIcon:M(qs,{}),onClick:()=>{a(r)},children:"GitHub Link"}),o&&M(Ed,{startIcon:M(qs,{}),onClick:()=>{a(o)},children:"Portfolio"})]})]})]})},mk=pe($S)`
-  width: ${({md:e})=>e?"300px":"350px"};
-  min-height: 200px;
+  width: ${({md:e})=>e?"280px":"320px"};
+  min-height: 300px;
   border-radius: 30%;
   padding: 20px;
   background: #141420;
   box-shadow: 0 0 0.5rem 0.5rem #1a1a2e;
   border-radius: 12%;
   color: white;
-  margin: 20px;
+  margin: 20px 0 20px 0;
 `,gk=pe(BS)`
   text-align: center;
 `,yk=pe("div")`
@@ -226,19 +226,21 @@ Error generating stack: `+i.message+`
 `,vk=pe("div")`
   display: grid;
   grid-template-columns: 1fr 1fr;
-`,wk="/assets/nutripodlogo-b97b761b.png",Sk="/assets/nutripod-e1faa4a8.pdf",xk="/assets/pocketmonlogo-012df1e6.png",kk="/assets/pocketmon-626ed555.pdf",Ck=()=>{const{smallerThanMDMediaBreakPoint:e,smallerThanXLMediaBreakPoint:t}=Yo();return console.log("md: ",e),M(Ek,{children:ze("div",{children:[M(Nm,{title:"Projects",paddingX:"1.5rem"}),M(_d,{md:e,xl:t,children:"These are the group project I have done during my time in Tecky Academy"}),ze($d,{md:e,children:[M(Cd,{title:"Nutripod",image:wk,description:"Nutripod is a healthcare web react application. It's a platform designed for a clinic that provides nutrition consultation and helps them to manage clients' diet and develop clients' diet habits and lifestyle.",githubLink:"https://github.com/SamOr1014/Nutripod",previewLink:Sk}),M(Cd,{title:"Pocketmon",image:xk,description:"Pocketmon is a web application that is aimmed to allow users to record their spending by uploading their receipt. An OCR AI will read the price, venue and the date of the receipt and record it in the database as the user's expenses.",githubLink:"https://github.com/SamOr1014/Pocketmon",previewLink:kk,pictureStyling:{width:"180px",background:"white",borderRadius:"10%"}})]}),M(_d,{children:"These are the individual project"}),M($d,{children:M("div",{style:{width:"100%",textAlign:"center"},children:"currently in progress..."})})]})})},Ek=Ze(Ft)`
-  min-height: ${({md:e})=>(console.log("container md: ",e),e?"max-content":"100vh")};
+`,wk="/assets/nutripodlogo-b97b761b.png",Sk="/assets/nutripod-e1faa4a8.pdf",xk="/assets/pocketmonlogo-012df1e6.png",kk="/assets/pocketmon-626ed555.pdf",Ck=()=>{const{smallerThanMDMediaBreakPoint:e,smallerThanXLMediaBreakPoint:t,smallerThanLGMediaBreakPoint:n}=Yo();return ze(Ek,{md:e,lg:n,children:[M(Nm,{title:"Projects",paddingX:"1.5rem"}),M(_d,{md:e,xl:t,children:"These are the group project I have done during my time in Tecky Academy"}),ze($d,{md:e,children:[M(Cd,{title:"Nutripod",image:wk,description:"Nutripod is a healthcare web react application. It's a platform designed for a clinic that provides nutrition consultation and helps them to manage clients' diet and develop clients' diet habits and lifestyle.",githubLink:"https://github.com/SamOr1014/Nutripod",previewLink:Sk}),M(Cd,{title:"Pocketmon",image:xk,description:"Pocketmon is a web application that is aimmed to allow users to record their spending by uploading their receipt. An OCR AI will read the price, venue and the date of the receipt and record it in the database as the user's expenses.",githubLink:"https://github.com/SamOr1014/Pocketmon",previewLink:kk,pictureStyling:{width:"180px",background:"white",borderRadius:"10%"}})]}),M(_d,{children:"These are the individual project"}),M($d,{children:M("div",{style:{width:"100%",textAlign:"center"},children:"currently in progress..."})})]})},Ek=Ze(Ft)`
+  min-height: max-content;
   width: 100%;
   display: grid;
   place-items: center;
   margin-bottom: ${({md:e})=>e?"3rem":"10px"};
 `,$d=Ze(Ft)`
   display: flex;
+  flex-direction: column;
   justify-content: ${({md:e})=>e?"center":"space-between"};
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px;
+  ${({md:e})=>e?"gap: 50px":""}
+  margin: 20px 0px 20px 0px;
+  width: 100%;
 `,_d=Ze(Ft)`
   text-align: center;
   font-size: ${({md:e,xl:t})=>e?"0.7rem":t?" 0.8rem ":"1.1rem"};
