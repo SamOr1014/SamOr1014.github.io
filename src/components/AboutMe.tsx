@@ -13,10 +13,16 @@ import mongoLogo from "../assets/mongologo.png";
 import MainTechStack from "./common/ListOfAvatar";
 
 function AboutMe() {
-  const { smallerThanMDMediaBreakPoint, smallerThanXLMediaBreakPoint } =
-    useWebMediaQuery();
+  const {
+    smallerThanMDMediaBreakPoint,
+    smallerThanXLMediaBreakPoint,
+    smallerThanLGMediaBreakPoint,
+  } = useWebMediaQuery();
   return (
-    <AboutMeContainer md={smallerThanMDMediaBreakPoint}>
+    <AboutMeContainer
+      md={smallerThanMDMediaBreakPoint}
+      lg={smallerThanLGMediaBreakPoint}
+    >
       <div>
         <Title title="About Me" paddingX="1.5rem" />
         <FlexWrapper>
@@ -59,11 +65,11 @@ function AboutMe() {
 }
 
 const AboutMeContainer = styled(Box)<MediaQueryProps>`
-  height: ${({ md }) => (md ? "max-content" : "100vh")};
+  height: max-content;
   width: 100%;
   display: grid;
   place-items: center;
-  margin-bottom: ${({ md }) => (md ? "3rem" : "0px")};
+  margin-bottom: ${({ lg }) => (lg ? "3rem" : "1rem")};
 `;
 const FlexWrapper = styled(Box)`
   display: flex;

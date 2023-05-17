@@ -74,15 +74,15 @@ const ProjectCard = ({
 };
 
 const StyledCard = styled(Card)<{ md: boolean }>`
-  width: ${({ md }) => (md ? "300px" : "350px")};
-  min-height: 200px;
+  width: ${({ md }) => (md ? "280px" : "320px")};
+  min-height: 300px;
   border-radius: 30%;
   padding: 20px;
   background: #141420;
   box-shadow: 0 0 0.5rem 0.5rem #1a1a2e;
   border-radius: 12%;
   color: white;
-  margin: 20px;
+  margin: 20px 0 20px 0;
 `;
 
 const StyledCardHeader = styled(CardHeader)`
