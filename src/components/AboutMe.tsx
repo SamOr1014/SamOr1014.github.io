@@ -49,8 +49,13 @@ function AboutMe() {
               <p>
                 I joined a web development course at{" "}
                 <a href="https://tecky.io/en/">Tecky Academy</a> in June 2022,
-                and I am now (as of May 2023) working at a digit media company
-                in Hong Kong as a Software Engineer.
+                and I was working at a digit media company in Hong Kong as a
+                Software Engineer (10/2022 - present, currently working
+                remotely).
+              </p>
+              <p>
+                I have recently moved to the UK and open to work opportunities
+                (as of March 2024)!
               </p>
               <SubTitle>Main Tech Stacks</SubTitle>
               <MainTechStack
